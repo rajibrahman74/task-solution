@@ -3,8 +3,8 @@ import { Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
-    <div>
-      <div className="navbar bg-[#f2f2f2]">
+    <>
+      <div className="fixed top-0 navbar bg-[#f2f2f2]">
         <div className="navbar-start">
           <div className="dropdown">
             <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -27,39 +27,27 @@ const Navbar = () => {
               tabIndex={0}
               className="menu menu-sm dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52"
             >
-              <li>
+              <li className="font-semibold">
                 <Link to="/">Home</Link>
               </li>
-              <li>
+              <li className="font-semibold">
                 <Link to="/show-list">Show list</Link>
-              </li>
-              <li>
-                <Link to="/show-details">Show Details</Link>
-              </li>
-              <li>
-                <Link to="/show-details">Ticket Bookings</Link>
               </li>
             </ul>
           </div>
         </div>
         <div className="navbar-center hidden lg:flex mx-auto">
           <ul className="menu menu-horizontal px-1 me-auto">
-            <li>
+            <li className="font-semibold">
               <Link to="/">Home</Link>
             </li>
-            <li>
+            <li className="font-semibold">
               <Link to="/show-list">Show list</Link>
-            </li>
-            <li>
-              <Link to="/show-details">Show Details</Link>
-            </li>
-            <li>
-              <Link to="/show-details">Ticket Bookings</Link>
             </li>
           </ul>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 
