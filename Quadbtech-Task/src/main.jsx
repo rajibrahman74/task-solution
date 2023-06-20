@@ -28,8 +28,9 @@ const router = createBrowserRouter([
         loader: () => fetch("https://api.tvmaze.com/search/shows?q=all"),
       },
       {
-        path:"/buyticket",
+        path:"/buyticket/:id",
         element: <Booking/>,
+        loader: () => fetch("https://api.tvmaze.com/search/shows?q=all"),
       },
     ],
   },

@@ -1,10 +1,10 @@
 import React from 'react'
-import ShowList from "../ShowList/ShowList"
+import Cards from '../ShowList/Cards'
 
 const Home = () => {
   return (
-    <div>
-      <ShowList/>
+    <div className='px-24 py-24'>
+      <Cards/>
     </div>
   )
 }
