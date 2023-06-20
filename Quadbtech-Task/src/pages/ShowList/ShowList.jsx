@@ -1,5 +1,5 @@
 import React from "react";
-import { useLoaderData } from "react-router-dom";
+import { useLoaderData, Link } from "react-router-dom";
 import Summary from "./Summary";
 
 const ShowList = () => {
@@ -7,7 +7,7 @@ const ShowList = () => {
   console.log(movies);
 
   return (
-    <section className="my-20">
+    <section className="my-20 max-w-7xl mx-auto ">
       <h2 className="text-center font-semibold text-4xl mb-16">
         Show all list
       </h2>
@@ -52,7 +52,7 @@ const ShowList = () => {
               <div className="flex mt-auto text-2xl font-bold text-a">
                 {movie.show.runtime && <p>Runtime: {movie.show.runtime}</p>}
               </div>
-              <button className="bg-yellow-400 btn">Button</button>
+              <Link to={`/movie/${movie.show.id}`}  className="bg-yellow-400 btn">See More</Link>
             </div>
           </div>
         ))}

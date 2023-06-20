@@ -3,9 +3,10 @@ import ReactDOM from "react-dom/client";
 import "./index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Main from "./Layout/Main";
-import Home from "./pages/Home/Home/Home";
+import Home from "./pages/Home/Home";
 import ShowList from "./pages/ShowList/ShowList";
-
+import ShowDetails from "./pages/ShowDetails/ShowDetails";
+import Booking from "./pages/Booking/Booking";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -14,23 +15,29 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home />,
+        loader: () => fetch("https://api.tvmaze.com/search/shows?q=all"),
       },
       {
-        path: "show-list",
+        path: "/showlist",
         element: <ShowList />,
         loader: () => fetch("https://api.tvmaze.com/search/shows?q=all"),
       },
       {
-        path:"show-list/:id",
-        element:
-      }
+        path:"movie/:id",
+        element: <ShowDetails/>,
+        loader: () => fetch("https://api.tvmaze.com/search/shows?q=all"),
+      },
+      {
+        path:"/buyticket",
+        element: <Booking/>,
+      },
     ],
   },
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <div className="max-w-7xl mx-auto px-4">
+    <div>
       <RouterProvider router={router} />
     </div>
   </React.StrictMode>
