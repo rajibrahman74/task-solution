@@ -5,6 +5,7 @@ const Booking = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [phoneNumber, setPhoneNumber] = useState("");
+  const [selectedSeats, setSelectedSeats] = useState("");
   const [seatType, setSeatType] = useState("");
   const [price, setPrice] = useState(0);
 
@@ -18,7 +19,7 @@ const Booking = () => {
     setName("");
     setEmail("");
     setPhoneNumber("");
-  
+    setSelectedSeats("");
     setSeatType("");
     setPrice(0);
   };
