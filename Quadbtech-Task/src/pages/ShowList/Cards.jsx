@@ -15,9 +15,9 @@ const Cards = () => {
         <div className="h-48 w-full mb-4 overflow-hidden rounded-3xl">
           {movie.show.image && movie.show.image.medium && (
             <img
-              src={movie.show.image.original}
+            src={movie.show.image.original || ''}
               className="object-cover h-full w-full"
-              alt=""
+              alt="Image not Found"
             />
           )}
         </div>
