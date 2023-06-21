@@ -44,7 +44,7 @@ const Booking = () => {
   };
 
   return (
-    <div className="py-[12rem] max-w-md mx-auto h-[100vh]">
+    <div className="py-[12rem] max-w-md mx-auto px-2">
       <h2 className="text-5xl font-bold mb-8">Booking Form</h2>
       {movie && (
         <form onSubmit={handleSubmit}>

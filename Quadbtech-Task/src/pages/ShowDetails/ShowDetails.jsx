@@ -13,18 +13,18 @@ const ShowDetails = () => {
     }
 
     return (
-        <div className="py-[12rem] flex md:flex-row flex-col lg:px-[25rem] justify-center h-screen">        
+        <div className="py-[12rem] px-2 flex md:flex-row flex-col xl:px-[25rem] justify-center items-center">        
             <img
                 src={movie.show.image.original}
-                className="object-cover h-[40rem] w-[30rem]"
+                className="object-cover h-auto w-[30rem]"
                 alt=""
             />
-            <div className="px-12 py-12">
+            <div className="px-12 py-12 justify-center">
             <h2 className="text-[3rem]">{movie.show.name}</h2>
             <Summary  summary={movie.show.summary} />
             <div className="py-5">
-            <Link to="/" className="bg-yellow-400 btn">Go Back</Link>
-            <Link to={`/buyticket/${movie.show.id}`} className="bg-yellow-400 btn">Book Ticket</Link>
+            <Link to="/" className="bg-yellow-400 btn w-[10rem] mr-2">Go Back</Link>
+            <Link to={`/buyticket/${movie.show.id}`} className="bg-yellow-400 btn w-[10rem]">Book Ticket</Link>
             </div>
             </div>
            
