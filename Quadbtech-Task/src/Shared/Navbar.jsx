@@ -31,18 +31,21 @@ const Navbar = () => {
                 <Link to="/">Home</Link>
               </li>
               <li className="font-semibold">
-                <Link to="/show-list">Show list</Link>
+                <Link to="/showlist">Show list</Link>
               </li>
             </ul>
           </div>
         </div>
         <div className="navbar-center hidden lg:flex mx-auto">
           <ul className="menu menu-horizontal px-1 me-auto">
-            <li className="font-semibold">
+          <li className="active font-semibold">
               <Link to="/">Home</Link>
             </li>
             <li className="font-semibold">
-              <Link to="/show-list">Show list</Link>
+              <Link to="/showlist">Show List</Link>
+            </li>
+            <li className="font-semibold px-2">
+              <Link to="/contact">Contact</Link>
             </li>
           </ul>
         </div>
